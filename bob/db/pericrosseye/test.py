@@ -67,11 +67,11 @@ def test02_objects():
     db = bob.db.pericrosseye.Database()
     for p in db.protocols():
         assert len(db.objects(protocol=p, groups="world")) == 16 * 20
-        assert len(db.objects(protocol=p, groups="dev")) == 16 * 10
-        assert len(db.objects(protocol=p, groups="eval")) == 16 *10
+        assert len(db.objects(protocol=p, groups="dev")) == 10 + 8 * 10
+        assert len(db.objects(protocol=p, groups="eval")) == 10 + 8 *10
 
         assert len(db.objects(protocol=p, groups="dev", purposes=("enroll",))) == 10
-        assert len(db.objects(protocol=p, groups="dev", purposes=("probe",))) == (16 * 10) - 10
+        assert len(db.objects(protocol=p, groups="dev", purposes=("probe",))) == 8*10
 
         assert len(db.objects(protocol=p, groups="eval", purposes=("enroll",))) == 10
-        assert len(db.objects(protocol=p, groups="eval", purposes=("probe",))) == (16 * 10) - 10
+        assert len(db.objects(protocol=p, groups="eval", purposes=("probe",))) == 8*10

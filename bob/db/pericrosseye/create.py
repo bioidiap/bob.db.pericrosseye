@@ -43,7 +43,9 @@ def add_clients_files(session, image_dir, verbose=True):
 
     """
 
-    clients = {}  # Controling the clients and the sessions captured for each client
+    clients_vis = {}  # Controling the clients and the sessions captured for each client
+    clients_nir = {}
+    clients_general = {}
     file_id_offset = 1
 
     data_files = [bob.io.base.test_utils.datafile('NIR.txt', __name__),
@@ -60,10 +62,20 @@ def add_clients_files(session, image_dir, verbose=True):
 
             # Generation the client name R-XXX or L-XXX
             client_name = c.split("/")[-3] + "-" + c.split("/")[-2]
+            
+            if modality == "VIS":
+                clients = clients_vis
+            else:
+                clients = clients_nir
+
+
+            if not clients_general.has_key(client_name):
+                session.add(Client(id=client_name))
+                clients_general[client_name] = []
+            
             if not clients.has_key(client_name):
                 clients[client_name] = []
                 if verbose >= 1: print("  Adding client {0}".format(client_name))
-                session.add(Client(id=client_name))
 
             file_list = os.listdir(os.path.join(image_dir, c).rstrip("\n"))
             for ff in file_list:
@@ -73,46 +85,46 @@ def add_clients_files(session, image_dir, verbose=True):
                 clients[client_name].append(file_id_offset)
                 file_id_offset += 1
 
-    return clients
+    return clients_vis, clients_nir
 
 
-def add_protocols(session, clients, protocol):
+def add_protocols(session, clients_vis, clients_nir, protocol):
 
-    keys = clients.keys()
+    keys = clients_vis.keys()
     numpy.random.shuffle(keys)
 
     # Adding world
     for i in range(0, 20):
-        files = clients[keys[i]]
-
+        files = clients_vis[keys[i]]
         for f in files:
             session.add(Protocol_File_Association(protocol, "world", "train", f))
 
+        files = clients_nir[keys[i]]
+        for f in files:
+            session.add(Protocol_File_Association(protocol, "world", "train", f))
+
+
     # Adding dev
     for i in range(20, 30):
-        files = clients[keys[i]]
-        enroll = True
+        # Addind enroll first in the list
+        files = clients_vis[keys[i]]                
+        session.add(Protocol_File_Association(protocol, "dev", "enroll", files[0]))
+        
+        # Addindg probe
+        files = clients_nir[keys[i]]
         for f in files:
-            if enroll:
-                purpose="enroll"
-                enroll = False
-            else:
-                purpose="probe"
+            session.add(Protocol_File_Association(protocol, "dev", "probe", f))
 
-            session.add(Protocol_File_Association(protocol, "dev", purpose, f))
-
-    # Adding dev
+    # Adding eval
     for i in range(30, 40):
-        files = clients[keys[i]]
-        enroll = True
+        # Addind enroll first in the list
+        files = clients_vis[keys[i]]                
+        session.add(Protocol_File_Association(protocol, "eval", "enroll", files[0]))
+        
+        # Addindg probe
+        files = clients_nir[keys[i]]
         for f in files:
-            if enroll:
-                purpose = "enroll"
-                enroll = False
-            else:
-                purpose = "probe"
-
-            session.add(Protocol_File_Association(protocol, "eval", purpose, f))
+            session.add(Protocol_File_Association(protocol, "eval", "probe", f))
 
 
 def create_tables(args):
@@ -147,12 +159,12 @@ def create(args):
     # the real work...
     create_tables(args)
     s = session_try_nolock(args.type, args.files[0], echo=(args.verbose >= 2))
-    clients = add_clients_files(s, args.image_dir, args.verbose)
-    add_protocols(s, clients, "cross-eye-VIS-NIR-split1")
-    add_protocols(s, clients, "cross-eye-VIS-NIR-split2")
-    add_protocols(s, clients, "cross-eye-VIS-NIR-split3")
-    add_protocols(s, clients, "cross-eye-VIS-NIR-split4")
-    add_protocols(s, clients, "cross-eye-VIS-NIR-split5")
+    clients_vis, clients_nir = add_clients_files(s, args.image_dir, args.verbose)
+    add_protocols(s, clients_vis, clients_nir, "cross-eye-VIS-NIR-split1")
+    add_protocols(s, clients_vis, clients_nir, "cross-eye-VIS-NIR-split2")
+    add_protocols(s, clients_vis, clients_nir, "cross-eye-VIS-NIR-split3")
+    add_protocols(s, clients_vis, clients_nir, "cross-eye-VIS-NIR-split4")
+    add_protocols(s, clients_vis, clients_nir, "cross-eye-VIS-NIR-split5")
 
     s.commit()
     s.close()
