@@ -14,8 +14,6 @@
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye
 .. image:: http://img.shields.io/pypi/v/bob.db.pericrosseye.png
    :target: https://pypi.python.org/pypi/bob.db.pericrosseye
-.. image:: http://img.shields.io/pypi/dm/bob.db.pericrosseye.png
-   :target: https://pypi.python.org/pypi/bob.db.pericrosseye
 .. image:: https://img.shields.io/badge/original-data--files-a000a0.png
    :target: https://sites.google.com/site/crossspectrumcompetition/guidelines
 
