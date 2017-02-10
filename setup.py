@@ -25,9 +25,9 @@ install_requires = load_requirements()
 setup(
 
     name='bob.db.pericrosseye',
-    version='0.0.0a1',
+    version=open("version.txt").read().rstrip(),
     description='Cross-Spectrum Periocular Database',
-    url='',
+    url='https://gitlab.idiap.ch/bob/bob.db.pericrosseye',
     license='BSD',
     keywords = "",
     author='Tiago de Freitas Pereira',

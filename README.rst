@@ -8,7 +8,7 @@
    :target: http://pythonhosted.org/bob.db.pericrosseye/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.png
    :target: https://www.idiap.ch/software/bob/docs/latest/bob/bob.db.pericrosseye/master/index.html
-.. image:: https://gitlab.idiap.ch/bob/bob.db.cuhk_cufs/badges/master/build.svg
+.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/build.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye
