@@ -30,15 +30,13 @@ SQLITE_FILE = Interface().files()[0]
 
 class Database(bob.db.base.SQLiteDatabase):
     """Wrapper class for the Periocular Recognition competition
-  
+
     """
 
     def __init__(self, original_directory=None, original_extension=None):
         # call base class constructors to open a session to the database
 
-        super(Database, self).__init__(SQLITE_FILE, File)
-        self.original_directory = original_directory
-        self.original_extension = original_extension
+        super(Database, self).__init__(SQLITE_FILE, File, original_directory, original_extension)
 
     def protocols(self):
         return PROTOCOLS
@@ -73,7 +71,7 @@ class Database(bob.db.base.SQLiteDatabase):
             if type(model_ids) is not list and type(model_ids) is not tuple:
                 model_ids = [model_ids]
 
-            # if you provide a client object as input and not the ids    
+            # if you provide a client object as input and not the ids
             if type(model_ids[0]) is bob.db.pericrosseye.Client:
                 model_aux = []
                 for m in model_ids:
@@ -172,7 +170,7 @@ class Database(bob.db.base.SQLiteDatabase):
 
         ###### THE MOST IMPORTANT THING IN THE METHOD
         ### IF THE PROTOCOL IS   PHOTO --> SKETCH, THE T-OBJECTS ARE PHOTOS
-        ### IF THE PROTOCOL IS   SKETCH --> PHOTO, THE T-OBJECTS ARE SKETCHES 
+        ### IF THE PROTOCOL IS   SKETCH --> PHOTO, THE T-OBJECTS ARE SKETCHES
         if "p2s" in protocol:
             query = query.filter(bob.db.pericrosseye.File.modality == "VIS")
         else:
