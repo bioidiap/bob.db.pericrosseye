@@ -8,10 +8,10 @@
    :target: http://pythonhosted.org/bob.db.pericrosseye/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.png
    :target: https://www.idiap.ch/software/bob/docs/latest/bob/bob.db.pericrosseye/master/index.html
-.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/v1.0.1/build.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/v1.0.1
-.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/v1.0.1/coverage.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/v1.0.1
+.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/build.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
+.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/coverage.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye
 .. image:: http://img.shields.io/pypi/v/bob.db.pericrosseye.png
