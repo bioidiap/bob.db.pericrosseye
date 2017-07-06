@@ -5,9 +5,9 @@
 
 
 .. image:: http://img.shields.io/badge/docs-stable-yellow.png
-   :target: http://pythonhosted.org/bob.db.pericrosseye/index.html
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.pericrosseye/stable/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.png
-   :target: https://www.idiap.ch/software/bob/docs/latest/bob/bob.db.pericrosseye/master/index.html
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.pericrosseye/master/index.html
 .. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/build.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
 .. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/coverage.svg
@@ -35,7 +35,7 @@ It includes samples of 20 identities captured in both VIS and NIR.
 Installation
 ------------
 
-Complete Bob's `installation`_ instructions. Then, to install this pacakge,
+Complete Bob's `installation`_ instructions. Then, to install this package,
 run::
 
   $ conda install bob.db.pericrosseye
