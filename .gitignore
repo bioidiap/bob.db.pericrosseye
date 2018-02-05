@@ -20,3 +20,4 @@ sphinx
 *.egg-info
 .mr.developer.cfg
 *.sql3
+record.txt
