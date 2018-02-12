@@ -22,7 +22,9 @@ requirements:
     - python {{ python }}
     - setuptools {{ setuptools }}
     - six {{ six }}
+    - bob.io.base
     - bob.db.base
+    - nose
   run:
     - python
     - setuptools
