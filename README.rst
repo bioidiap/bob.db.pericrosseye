@@ -4,14 +4,14 @@
 
 
 
-.. image:: http://img.shields.io/badge/docs-v1.0.2-yellow.png
-   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.pericrosseye/v1.0.2/index.html
+.. image:: http://img.shields.io/badge/docs-stable-yellow.png
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.pericrosseye/stable/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.png
    :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.pericrosseye/master/index.html
-.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/v1.0.2/build.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/v1.0.2
-.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/v1.0.2/coverage.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/v1.0.2
+.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/build.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
+.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/coverage.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye
 .. image:: http://img.shields.io/pypi/v/bob.db.pericrosseye.png
