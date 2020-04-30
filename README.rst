@@ -4,20 +4,14 @@
 
 
 
-.. image:: http://img.shields.io/badge/docs-stable-yellow.png
-   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.pericrosseye/stable/index.html
-.. image:: http://img.shields.io/badge/docs-latest-orange.png
+.. image:: https://img.shields.io/badge/docs-available-orage.svg
    :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.pericrosseye/master/index.html
-.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/build.svg
+.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/pipeline.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
 .. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/coverage.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye
-.. image:: http://img.shields.io/pypi/v/bob.db.pericrosseye.png
-   :target: https://pypi.python.org/pypi/bob.db.pericrosseye
-.. image:: https://img.shields.io/badge/original-data--files-a000a0.png
-   :target: https://sites.google.com/site/crossspectrumcompetition/guidelines
 
 
 =======================================================
