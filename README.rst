@@ -6,10 +6,10 @@
 
 .. image:: https://img.shields.io/badge/docs-available-orange.svg
    :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.pericrosseye/master/index.html
-.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/v1.0.7/pipeline.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/v1.0.7
-.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/v1.0.7/coverage.svg
-   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/v1.0.7
+.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/pipeline.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
+.. image:: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/badges/master/coverage.svg
+   :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye/commits/master
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.pericrosseye
 
